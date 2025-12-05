@@ -17,14 +17,12 @@ for idx, (start, end) in enumerate(ranges):
     if idx == 0:
         c2 += end - start + 1
         max_end = end
-    else:
-        prev_start, prev_end = ranges[idx - 1]
-        if start > max_end:
-            c2 += end - start + 1
-            max_end = end
-        elif end > max_end:
-            c2 += end - max_end
-            max_end = end
+    elif start > max_end:
+        c2 += end - start + 1
+        max_end = end
+    elif end > max_end:
+        c2 += end - max_end
+        max_end = end
 
 print(c2)
 
