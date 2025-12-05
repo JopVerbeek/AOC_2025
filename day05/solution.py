@@ -12,12 +12,9 @@ for ingredient in ingredients:
             break
 
 c2 = 0
-max_end = 0
+max_end = -1
 for idx, (start, end) in enumerate(ranges):
-    if idx == 0:
-        c2 += end - start + 1
-        max_end = end
-    elif start > max_end:
+    if start > max_end:
         c2 += end - start + 1
         max_end = end
     elif end > max_end:
