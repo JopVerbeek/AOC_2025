@@ -13,7 +13,7 @@ for ingredient in ingredients:
 
 c2 = 0
 max_end = -1
-for idx, (start, end) in enumerate(ranges):
+for start, end in ranges:
     if start > max_end:
         c2 += end - start + 1
         max_end = end
